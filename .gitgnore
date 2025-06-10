@@ -1,2 +1,5 @@
+# Ignore all macOS system files
+.DS_Store
+
 # Ignore all shell scripts
 *.sh
