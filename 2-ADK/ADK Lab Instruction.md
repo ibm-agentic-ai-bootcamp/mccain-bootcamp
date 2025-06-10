@@ -62,25 +62,25 @@ will need two credentials: your instance URL and your IBM cloud API key:
 3.  Under Manage select Access (IAM)
 
 > <img
-> src="./Lab2 - Orchestrate ADK/attachments/ADK Lab Instruction/8cf71f5828c84d48606df7b140caccdabab322e2.png"
+> src="./2-ADK/attachments/ADK Lab Instruction/8cf71f5828c84d48606df7b140caccdabab322e2.png"
 > style="width:6in;height:3.14583in" />
 
 1.  Go to API keys on the left
 
 <img
-src="./Lab2 - Orchestrate ADK/attachments/ADK Lab Instruction/b9739ff07eebcbade26987a92eb53bf073ba4acb.png"
+src="./2-ADK/attachments/ADK Lab Instruction/b9739ff07eebcbade26987a92eb53bf073ba4acb.png"
 style="width:6in;height:3.10417in" />
 
 1.  Create a new API
 
 <img
-src="./Lab2 - Orchestrate ADK/attachments/ADK Lab Instruction/3b253b3a7e136db09bfc67e4a3184c90989cc467.png"
+src="./2-ADK/attachments/ADK Lab Instruction/3b253b3a7e136db09bfc67e4a3184c90989cc467.png"
 style="width:5.25in;height:2.6875in" />
 
 1.  Give it a name and click on create:
 
 <img
-src="./Lab2 - Orchestrate ADK/attachments/ADK Lab Instruction/1ac4f9f99d40ec7d964730cab2839e7ab9dc1242.png"
+src="./2-ADK/attachments/ADK Lab Instruction/1ac4f9f99d40ec7d964730cab2839e7ab9dc1242.png"
 style="width:6in;height:3.11458in" />
 
 1.  Make sure to copy and save your API key in a text file. You can also
@@ -97,37 +97,37 @@ style="width:6in;height:3.11458in" />
     Orchestrate instance:
 
 <img
-src="./Lab2 - Orchestrate ADK/attachments/ADK Lab Instruction/8f870589db4f0a08a1d605510fcb3d37a1bfa910.png"
+src="./2-ADK/attachments/ADK Lab Instruction/8f870589db4f0a08a1d605510fcb3d37a1bfa910.png"
 style="width:6in;height:3.08333in" />
 
 1.  Click on Launch watsonx Orchestrate:
 
 <img
-src="./Lab2 - Orchestrate ADK/attachments/ADK Lab Instruction/a1d644a8497562767000c9807345c0e9690d5b1f.png"
+src="./2-ADK/attachments/ADK Lab Instruction/a1d644a8497562767000c9807345c0e9690d5b1f.png"
 style="width:6in;height:3.125in" />
 
 1.  Click on your profile on the top right
 
 <img
-src="./Lab2 - Orchestrate ADK/attachments/ADK Lab Instruction/c9b86e149fb2b3c4a79c493b9c15065f7e3681c9.png"
+src="./2-ADK/attachments/ADK Lab Instruction/c9b86e149fb2b3c4a79c493b9c15065f7e3681c9.png"
 style="width:6in;height:3.10417in" />
 
 1.  Go to settings
 
 <img
-src="./Lab2 - Orchestrate ADK/attachments/ADK Lab Instruction/392c71d33dad6adf767751076cf26563d0eb40c3.png"
+src="./2-ADK/attachments/ADK Lab Instruction/392c71d33dad6adf767751076cf26563d0eb40c3.png"
 style="width:6in;height:3.0625in" />
 
 1.  Go to API details tab
 
 <img
-src="./Lab2 - Orchestrate ADK/attachments/ADK Lab Instruction/21de0fd0c7aa65a3ef812ccff7ca188ddfd65a30.png"
+src="./2-ADK/attachments/ADK Lab Instruction/21de0fd0c7aa65a3ef812ccff7ca188ddfd65a30.png"
 style="width:6in;height:3.07292in" />
 
 1.  Copy and save the Instance URL in a text file to use it later.
 
 <img
-src="./Lab2 - Orchestrate ADK/attachments/ADK Lab Instruction/a009ee3914d2ea8db4b2bf9859262bbec000c3e9.png"
+src="./2-ADK/attachments/ADK Lab Instruction/a009ee3914d2ea8db4b2bf9859262bbec000c3e9.png"
 style="width:6in;height:3.08333in" />
 
 1.  Now that you have both the API key and the instance URL, go back to
@@ -145,8 +145,7 @@ orchestrate env activate agentic-bootcamp --apikey API\_KEY
     created and activated you can run orchestrate env list and you
     should see something similar to the below image:
 
-<img
-src="./Lab2 - Orchestrate ADK/attachments/ADK Lab Instruction/media/image11.png"
+<img src="./2-ADK/attachments/ADK Lab Instruction/media/image11.png"
 style="width:5.96719in;height:0.42504in" />
 
 Great! You are now connected to your watsonx Orchestrate environment
@@ -1176,21 +1175,21 @@ care examples.
     instance of ServiceNow for you.
 
 > <img
-> src="./Lab2 - Orchestrate ADK/attachments/ADK Lab Instruction/429d0d9bebaa52a4a74300f7de2c0601852a25fb.png"
+> src="./2-ADK/attachments/ADK Lab Instruction/429d0d9bebaa52a4a74300f7de2c0601852a25fb.png"
 > style="width:6in;height:2.92708in" />
 
 1.  Under “My instance”, click Change User Role and ensure that the User
     Role is set to Admin.
 
 > <img
-> src="./Lab2 - Orchestrate ADK/attachments/ADK Lab Instruction/614e1e4ccb2cfab58ab7444fe756ae3132ea2569.png"
+> src="./2-ADK/attachments/ADK Lab Instruction/614e1e4ccb2cfab58ab7444fe756ae3132ea2569.png"
 > style="width:6in;height:3.65625in" />
 
 1.  Back on the landing page, click your profile icon on the upper
     right. Under “My instance”, click manage instance password.
 
 > <img
-> src="./Lab2 - Orchestrate ADK/attachments/ADK Lab Instruction/b993abc7235dc3ef0803bc1c379fca190f8afad5.png"
+> src="./2-ADK/attachments/ADK Lab Instruction/b993abc7235dc3ef0803bc1c379fca190f8afad5.png"
 > style="width:6in;height:2.90625in" />
 
 1.  Create an application connection by using these credentials. Make
@@ -1243,15 +1242,13 @@ with users.
 
 1.  From the IBM watsonx Orchestrate chat page, click **Manage agents**.
 
-> <img
-> src="./Lab2 - Orchestrate ADK/attachments/ADK Lab Instruction/media/image12.png"
+> <img src="./2-ADK/attachments/ADK Lab Instruction/media/image12.png"
 > style="width:6in;height:3.11181in"
 > alt="A screenshot of a computer AI-generated content may be incorrect." />
 
 1.  Click **Create agent**.
 
-> <img
-> src="./Lab2 - Orchestrate ADK/attachments/ADK Lab Instruction/media/image13.png"
+> <img src="./2-ADK/attachments/ADK Lab Instruction/media/image13.png"
 > style="width:6in;height:3.09028in"
 > alt="A screenshot of a computer AI-generated content may be incorrect." />
 
@@ -1265,8 +1262,7 @@ with users.
 
 3.  Click **Finish** to complete.
 
-> <img
-> src="./Lab2 - Orchestrate ADK/attachments/ADK Lab Instruction/media/image14.png"
+> <img src="./2-ADK/attachments/ADK Lab Instruction/media/image14.png"
 > style="width:6in;height:3.10069in"
 > alt="A screenshot of a computer AI-generated content may be incorrect." />
 
@@ -1282,21 +1278,18 @@ To add tools:
 1.  From the Empower agent management screen, go to the **Toolset**
     section.
 
-> <img
-> src="./Lab2 - Orchestrate ADK/attachments/ADK Lab Instruction/media/image15.png"
+> <img src="./2-ADK/attachments/ADK Lab Instruction/media/image15.png"
 > style="width:6in;height:3.07431in"
 > alt="A screenshot of a computer AI-generated content may be incorrect." />
 
 1.  In Tools, click the drop-down list **Add tool**, and select **Add
     from local instance**.
 
-> <img
-> src="./Lab2 - Orchestrate ADK/attachments/ADK Lab Instruction/media/image16.png"
+> <img src="./2-ADK/attachments/ADK Lab Instruction/media/image16.png"
 > style="width:6in;height:3.07431in"
 > alt="A screenshot of a computer AI-generated content may be incorrect." />
 >
-> <img
-> src="./Lab2 - Orchestrate ADK/attachments/ADK Lab Instruction/media/image17.png"
+> <img src="./2-ADK/attachments/ADK Lab Instruction/media/image17.png"
 > style="width:6in;height:3.05347in"
 > alt="A screenshot of a computer AI-generated content may be incorrect." />
 
@@ -1308,8 +1301,7 @@ To add tools:
 > explicitly add the tools. This is just to show how you could add the
 > tools in general.)
 >
-> <img
-> src="./Lab2 - Orchestrate ADK/attachments/ADK Lab Instruction/media/image18.png"
+> <img src="./2-ADK/attachments/ADK Lab Instruction/media/image18.png"
 > style="width:6in;height:3.06806in"
 > alt="A screenshot of a computer AI-generated content may be incorrect." />
 
@@ -1318,23 +1310,20 @@ To add agents:
 1.  In **Agents**, add the agent that collaborates with your agent on
     running tasks. Click **Add agents +**.
 
-<img
-src="./Lab2 - Orchestrate ADK/attachments/ADK Lab Instruction/media/image19.png"
+<img src="./2-ADK/attachments/ADK Lab Instruction/media/image19.png"
 style="width:6in;height:3.07431in"
 alt="A screenshot of a computer AI-generated content may be incorrect." />
 
 1.  Select **Add from local instance.**
 
-<img
-src="./Lab2 - Orchestrate ADK/attachments/ADK Lab Instruction/media/image20.png"
+<img src="./2-ADK/attachments/ADK Lab Instruction/media/image20.png"
 style="width:6in;height:3.08472in"
 alt="A screenshot of a computer AI-generated content may be incorrect." />
 
 1.  Select **service\_now\_agent and customer\_care\_agent** by clicking
     in the plus icon and close the collaborator agents pop-up.
 
-> <img
-> src="./Lab2 - Orchestrate ADK/attachments/ADK Lab Instruction/media/image21.png"
+> <img src="./2-ADK/attachments/ADK Lab Instruction/media/image21.png"
 > style="width:6in;height:3.07431in"
 > alt="A screenshot of a computer AI-generated content may be incorrect." />
 
@@ -1344,8 +1333,7 @@ alt="A screenshot of a computer AI-generated content may be incorrect." />
     customer\_care\_agent, and if the user wants to use servicenow
     service to create a ticket you can use servicenow agent.”
 
-> <img
-> src="./Lab2 - Orchestrate ADK/attachments/ADK Lab Instruction/media/image22.png"
+> <img src="./2-ADK/attachments/ADK Lab Instruction/media/image22.png"
 > style="width:6in;height:5.07222in"
 > alt="A screenshot of a computer AI-generated content may be incorrect." />
 
@@ -1361,13 +1349,11 @@ expected.
 2.  Wait for the chat response. You can check how your response was
     generated by clicking **How did I get this response**.
 
-> <img
-> src="./Lab2 - Orchestrate ADK/attachments/ADK Lab Instruction/media/image23.png"
+> <img src="./2-ADK/attachments/ADK Lab Instruction/media/image23.png"
 > style="width:6in;height:3.06042in"
 > alt="A screenshot of a computer AI-generated content may be incorrect." />
 >
-> <img
-> src="./Lab2 - Orchestrate ADK/attachments/ADK Lab Instruction/media/image24.png"
+> <img src="./2-ADK/attachments/ADK Lab Instruction/media/image24.png"
 > style="width:6in;height:3.03542in"
 > alt="A screenshot of a computer AI-generated content may be incorrect." />
 
@@ -1389,16 +1375,14 @@ in the IBM watsonx Orchestrate chat.
 
 1.  Click **Deploy**.
 
-> <img
-> src="./Lab2 - Orchestrate ADK/attachments/ADK Lab Instruction/media/image25.png"
+> <img src="./2-ADK/attachments/ADK Lab Instruction/media/image25.png"
 > style="width:6in;height:3.05486in"
 > alt="A screenshot of a computer AI-generated content may be incorrect." />
 
 1.  Click **Home** or **IBM watsonx Orchestrate** to return for the chat
     page.
 
-> <img
-> src="./Lab2 - Orchestrate ADK/attachments/ADK Lab Instruction/media/image26.png"
+> <img src="./2-ADK/attachments/ADK Lab Instruction/media/image26.png"
 > style="width:6in;height:3.05486in"
 > alt="A screenshot of a computer AI-generated content may be incorrect." />
 
@@ -1406,7 +1390,7 @@ in the IBM watsonx Orchestrate chat.
     it directly from the watsonx Orchestrate chat page.
 
 > <img
-> src="./Lab2 - Orchestrate ADK/attachments/ADK Lab Instruction/4eb31a44e868b2b09a32701a664451580a3f01df.png"
+> src="./2-ADK/attachments/ADK Lab Instruction/4eb31a44e868b2b09a32701a664451580a3f01df.png"
 > style="width:6in;height:3.0625in"
 > alt="A screenshot of a computer AI-generated content may be incorrect." />
 >
