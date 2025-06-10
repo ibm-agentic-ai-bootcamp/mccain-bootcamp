@@ -6,7 +6,7 @@ The agent, named Traffic Agent, uses a REST API call to retrieve
 real-time traffic information for a given location. It was created with
 the watsonx.ai LangGraph template.
 
-<img src="./3-LangGraph/attachments/media/image1.png"
+<img src="./attachments/media/image1.png"
 style="width:6in;height:2.82569in"
 alt="A diagram of a company Description automatically generated" />
 
@@ -19,38 +19,38 @@ watsonx.ai Runtime instance where you intend to deploy.
     Cloud](https://cloud.ibm.com/). Click the hamburger menu (☰) in the
     top left corner, then select **Resource List**.
 
-<img src="./3-LangGraph/attachments/media/image2.png"
+<img src="./attachments/media/image2.png"
 style="width:6.15933in;height:1.87728in" />
 
 1.  Click on the instance name listed under the watsonx.ai Studio
     product.
 
-<img src="./3-LangGraph/attachments/media/image3.png"
+<img src="./attachments/media/image3.png"
 style="width:6in;height:3.17708in" />
 
 1.  Click the arrow next to **Launch in**, then select **IBM watsonx**
     (you may be prompted to sign in again).
 
-<img src="./3-LangGraph/attachments/media/image4.png"
+<img src="./attachments/media/image4.png"
 style="width:6in;height:2.8125in" />
 
 1.  Click the user icon in the top right corner and select **Profile and
     settings**.
 
-<img src="./3-LangGraph/attachments/media/image5.png"
+<img src="./attachments/media/image5.png"
 style="width:6in;height:2.01042in" />
 
 1.  Go to the **User API key** tab. If you don’t already have a key,
     click **Create**.
 
-<img src="./3-LangGraph/attachments/media/image6.png"
+<img src="./attachments/media/image6.png"
 style="width:6in;height:3.125in" />
 
 1.  Click on the Create button to create a new key. The new key will be
     listed as shown below. If you already have a key listed, you are
     good to go and don't need to do anything.
 
-<img src="./3-LangGraph/attachments/media/image7.png"
+<img src="./attachments/media/image7.png"
 style="width:6in;height:1.65181in" />
 
 # Part 1: Setup Deployment Space for LangGraph Agent
@@ -68,24 +68,24 @@ in a config.toml file later:
 1.  For API key, click the hamburger menu at the top left corner, then
     choose A**ccess (IAM)**.
 
-<img src="./3-LangGraph/attachments/media/image8.png"
+<img src="./attachments/media/image8.png"
 style="width:6in;height:2.84377in" />
 
 1.  Click the **API Keys**.
 
-<img src="./3-LangGraph/attachments/media/image9.png"
+<img src="./attachments/media/image9.png"
 style="width:6in;height:2.60417in" />
 
 1.  Click the blue **Create +** button, name your API key, then click
     **Create.**
 
-<img src="./3-LangGraph/attachments/media/image10.png"
+<img src="./attachments/media/image10.png"
 style="width:6in;height:3.82292in" />
 
 1.  Copy and save the API key in a notepad or download the API key json
     file.
 
-<img src="./3-LangGraph/attachments/media/image11.png"
+<img src="./attachments/media/image11.png"
 style="width:6in;height:2.69792in" />
 
 1.  For the Space GUID, go back to the **watsonx.ai instance** like what
@@ -94,24 +94,24 @@ style="width:6in;height:2.69792in" />
     menu button and choose **Deployments -&gt; View all deployment
     spaces**.
 
-<img src="./3-LangGraph/attachments/media/image12.png"
+<img src="./attachments/media/image12.png"
 style="width:6in;height:2.3125in" />
 
 1.  Click **New deployment space +** .
 
-<img src="./3-LangGraph/attachments/media/image13.png"
+<img src="./attachments/media/image13.png"
 style="width:6in;height:2.41667in" />
 
 1.  Give a name for the deployment space, in Watson Machine learning,
     select the only option (wml-itz-wxo.xxxx) , then click **Create.**
 
-<img src="./3-LangGraph/attachments/media/image14.png"
+<img src="./attachments/media/image14.png"
 style="width:5.75in;height:3.01042in" />
 
 1.  Once created, click **View new space**, go to the **Manage** tab,
     copy and save the Space GUID.
 
-<img src="./3-LangGraph/attachments/media/image15.png"
+<img src="./attachments/media/image15.png"
 style="width:6in;height:3.28125in" />
 
 # 
@@ -141,7 +141,7 @@ ready to deploy to watsonx.ai Runtime.
 </tbody>
 </table>
 
-<img src="./3-LangGraph/attachments/media/image16.png"
+<img src="./attachments/media/image16.png"
 style="width:6in;height:4.03125in" />
 
 Copy and paste the command above and hit Enter.
@@ -173,7 +173,7 @@ Copy and paste the command above and hit Enter.
 >
 > **Remember to Save** the file when done.
 
-<img src="./3-LangGraph/attachments/media/image17.png"
+<img src="./attachments/media/image17.png"
 style="width:6in;height:3.40625in" />
 
 1.  Optionally explore the agent and tool source code under
@@ -209,7 +209,7 @@ We’ll now deploy the agent using the watsonx.ai CLI.
 </tbody>
 </table>
 
-<img src="./3-LangGraph/attachments/media/image18.png"
+<img src="./attachments/media/image18.png"
 style="width:6in;height:2.19514in"
 alt="A screenshot of a computer Description automatically generated" />
 
@@ -232,7 +232,7 @@ alt="A screenshot of a computer Description automatically generated" />
 
 On your screen, it should look like this:
 
-<img src="./3-LangGraph/attachments/media/image19.png"
+<img src="./attachments/media/image19.png"
 style="width:6in;height:2.75in" />
 
 1.  After deployment, note the "**View the deployed AI service in the
@@ -245,7 +245,7 @@ style="width:6in;height:2.75in" />
       
     **Make sure you are copying the bottom URL under Public endpoint!**
 
-<img src="./3-LangGraph/attachments/media/image20.png"
+<img src="./attachments/media/image20.png"
 style="width:5.89697in;height:2.60348in" />
 
 1.  Now make sure the deployed service works as expected. Back on your
@@ -267,7 +267,7 @@ Toronto?"</p></th>
 </tbody>
 </table>
 
-<img src="./3-LangGraph/attachments/media/image21.png"
+<img src="./attachments/media/image21.png"
 style="width:6in;height:3.09375in" />
 
 # Part 4: Connect the Agent to watsonx Orchestrate
@@ -282,7 +282,7 @@ another vendor as long as the agent follow the output schema.
     **Resource list**. And click **watsonx Orchestrate** then click
     **Launch watsonx Orchestrate**.
 
-<img src="./3-LangGraph/attachments/media/image22.png"
+<img src="./attachments/media/image22.png"
 style="width:6in;height:2.53125in" />
 
 1.  You will be navigated to watsonx Orchestrate main page. Before we
@@ -295,13 +295,13 @@ interact with the Large Language Model (LLM) that works behind the
 scenes, and ask general questions, like “How are you today?" or "How is
 the traffic in Downtown Toronto?".
 
-<img src="./3-LangGraph/attachments/media/image23.png"
+<img src="./attachments/media/image23.png"
 style="width:6in;height:3.26042in" />
 
 1.  Click the hamburger menu button on the top left corner, click
     **Build** and **Agent Builder.**
 
-<img src="./3-LangGraph/attachments/media/image24.png"
+<img src="./attachments/media/image24.png"
 style="width:6in;height:2.26044in" />
 
 1.  Click **Create agent +** , keep it as **Create from scratch** give
@@ -323,24 +323,24 @@ specific locations</th>
 </tbody>
 </table>
 
-<img src="./3-LangGraph/attachments/media/image25.png"
+<img src="./attachments/media/image25.png"
 style="width:6in;height:3.1875in" />
 
 1.  Now scroll down until you see the **Agents** section under Toolset,
     then click **Add agent**
 
-<img src="./3-LangGraph/attachments/media/image26.png"
+<img src="./attachments/media/image26.png"
 style="width:6in;height:3.16667in" />
 
 1.  Choose **Import** option, this will allow us to import the agent
     from watsonx.ai or external agent
 
-<img src="./3-LangGraph/attachments/media/image27.png"
+<img src="./attachments/media/image27.png"
 style="width:6in;height:3.125in" />
 
 1.  Select the External agent option and click on Next.
 
-<img src="./3-LangGraph/attachments/media/image28.png"
+<img src="./attachments/media/image28.png"
 style="width:6in;height:3.08333in" />
 
 1.  On the following screen, enter details about the imported agent:
@@ -362,13 +362,13 @@ style="width:6in;height:3.08333in" />
   - Description of agent capabilities: **The TrafficAgent agent provides
     information about traffic in any given location.**
 
-<img src="./3-LangGraph/attachments/media/image29.png"
+<img src="./attachments/media/image29.png"
 style="width:6in;height:3.07292in" />
 
 1.  Then you should see the new connected agent appear in the **Agents**
     session.
 
-<img src="./3-LangGraph/attachments/media/image30.png"
+<img src="./attachments/media/image30.png"
 style="width:6in;height:2.98958in" />
 
 1.  Scroll to the bottom and you will see a **Behavior** section.  
@@ -381,7 +381,7 @@ style="width:6in;height:2.98958in" />
     No worries! You can find our model answer at the end of this
     document — but please give it a try yourself before looking.
 
-<img src="./3-LangGraph/attachments/media/image31.png"
+<img src="./attachments/media/image31.png"
 style="width:6in;height:3in" />
 
 1.  Let's test it before we publish the agent. Let's trigger the
@@ -392,7 +392,7 @@ style="width:6in;height:3in" />
     "Please tell me about traffic around Downtown Toronto." (You can
     obviously pick any other location too.)
 
-<img src="./3-LangGraph/attachments/media/image32.png"
+<img src="./attachments/media/image32.png"
 style="width:6in;height:3.01042in" />
 
 1.  Note that the agent was "reasoning", in other words, determining how
@@ -406,19 +406,19 @@ style="width:6in;height:3.01042in" />
     which steps the agent took. It should list one step, which you can
     expand as well.
 
-<img src="./3-LangGraph/attachments/media/image33.png"
+<img src="./attachments/media/image33.png"
 style="width:6in;height:5.5625in" />
 
 1.  Once you are satisfied with the answer, deploy this agent using the
     Deploy button as with the other agents before.
 
-<img src="./3-LangGraph/attachments/media/image34.png"
+<img src="./attachments/media/image34.png"
 style="width:6in;height:2.98958in" />
 
 1.  We can now go back to the home screen to see it there. Simply click
     on **watsonx Orchestrate** at the very top of the window.
 
-<img src="./3-LangGraph/attachments/media/image35.png"
+<img src="./attachments/media/image35.png"
 style="width:6in;height:3.17708in" />
 
 1.  Make sure you select the **Traffic Agent** under the Agents list on
@@ -430,7 +430,7 @@ You can ask for any other location too!
 “How is the traffic around Downtown Toronto?”  
 “What is the traffic situation in downtown San Francisco?”
 
-<img src="./3-LangGraph/attachments/media/image36.png"
+<img src="./attachments/media/image36.png"
 style="width:6in;height:3.15625in" />
 
 🎉 Congratulations!
