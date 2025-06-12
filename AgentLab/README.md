@@ -1,217 +1,392 @@
-# Lab 1: Build an Agent with wx.ai Agent Lab
+# Lab 1: Building AI Agents with watsonx.ai Agent Lab
 
-In this lab we will create an agent using watsonx.ai Agent Lab. Before diving in, there is a short overview of Agent Lab discussing some of its key features. If you want to skip the overview and start building your agent, go to [Step 1 - Build a vacation-planning agent with Agent Lab 😎](#build-a-vacation-planning-agent-with-agent-lab). The required steps for Lab 1 conclude at the end of [Step 2 - Deploy the agent using 1-click deployment 🚀](#deploy-the-agent-using-1-click-deployment). You should complete Step 1 and Step 2 in order to be able to complete the following labs in the class. The remaining content in [Additional tips for implementing various use cases in Agent Lab 💡](#additional-tips-for-implementing-various-use-cases-in-agent-lab) is optional and not required for the following labs.
+## Overview 🎯
 
+In this lab, you'll learn how to build, test, and deploy a vacation planning agent while exploring the collaboration opportunities between business users and developers.
+
+### Learning Objectives
+By the end of this lab, you will:
+- ✅ Build a functional vacation planning agent with multiple tools
+- ✅ Deploy your agent using 1-click deployment
+- ✅ Explore the developer collaboration workflow through deployment notebooks
+- ✅ Collect essential deployment credentials for downstream integrations
+
+---
 
 ## Table of Contents 📋
-- [Overview of Agent Lab 🤖](#overview-of-agent-lab)
-    - [Main Strengths 💪](#main-strengths)
-- [Step 1 - Build a vacation-planning agent with Agent Lab 😎](#build-a-vacation-planning-agent-with-agent-lab)
-- [Step 2 - Deploy the agent using 1-click deployment 🚀](#deploy-the-agent-using-1-click-deployment)
-- [Additional tips for implementing various use cases in Agent Lab 💡](#additional-tips-for-implementing-various-use-cases-in-agent-lab)
 
 
-# Overview of Agent Lab
+1. [Agent Lab Platform Overview](#agent-lab-platform-overview)
+   - [What is Agent Lab?](#what-is-agent-lab)
+   - [Key Value Propositions](#key-value-propositions)
+   - [Architecture Overview](#architecture-overview)
+2. [Building Your First Agent](#building-your-first-agent)
+   - [Step 1: Project Setup and Access](#step-1-project-setup-and-access)
+   - [Step 2: Build Agent Profile](#step-2-build-agent-profile)
+   - [Step 3: Testing and Validation](#step-3-testing-and-validation)
+   - [Step 4: Initiate Deployment Process](#step-4-initiate-deployment-process)
+   - [Step 5: Deployment Space Configuration](#step-5-deployment-space-configuration)
+   - [Step 6: Final Deployment](#step-6-final-deployment)
+   - [Step 5: Collecting Deployment Credentials](#step-5-collecting-deployment-credentials)
+3. [Lab Completion 🎉](#-lab-completion)
+4. [[Optional] Developer Collaboration Workflow](#developer-collaboration-workflow)
+   - [The Business-Developer Bridge](#the-business-developer-bridge)
+   - [Workflow Overview](#workflow-overview)
+   - [Save Options: Agent vs. Deployment Notebook](#save-options-agent-vs-deployment-notebook)
+   - [Developer Enhancement Opportunities](#developer-enhancement-opportunities)
+   - [Collaboration Best Practices](#collaboration-best-practices)
 
-The Agent Lab feature of watsoxn.ai enables you to easily build and customize your AI agent with minimal coding. You define the parameters of the interaction between the agent and the end user, including the foundation model, framework, architecture, and tools that the agent uses to accomplish a task.
-
-In a real-world scenario, the agent takes the next best step based on the current state of the interaction. The foundation model within the agent picks one or several external tools based on the prompts submitted by the end user. The agent framework then uses a process called tool calling, which is also referred to as function calling, to search for information from multiple sources and generate a response.
-
-Check [this document](https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/fm-agent-lab.html?context=wx&pos=2) for the latest information about Agent Lab.
-
-
-## Main Strengths:
-Below are some of the Agent Lab strengths that you can can use when demoing this feature to your clients.
-+ **Low-code agent builder**: 
-  - Facilitates building agents
-  - Enables a wider range of users with different levels of technical expertise
-+ **1-click deployment**: 
-  - Facilitates scaling agentic AI applications
-  - Reduces time to value by allowing quick deployment
-+ **Provides a great starting point for developers**:
-  - Developers and pro-code users can leverage Agent Lab's deployment notebook as a head start, and further customize it to build tailored applications
-
-
-#
-# Build a vacation-planning agent with Agent Lab
-
-If this is your first time in this account, you will need to first create a project to be able to start using Agent Lab. Once you created a project, go to that project, then go to the Assets tab and click on New asset. 
-<img src="https://github.ibm.com/skol-assets/watsonx-ai-agents-class/blob/main/lab1/images/1-new asset-updated.png">
-
-
-Then from the list of assets, click on **"Build an AI agent to automate tasks"**.
-<img src="https://github.ibm.com/skol-assets/watsonx-ai-agents-class/blob/main/lab1/images/2-asset - agent lab-updated.png">
-
-
-When opening the Agent Lab for the first time, you will need to associate it with an ai runtime service. Click on Associate service.
-<img src="https://github.ibm.com/skol-assets/watsonx-ai-agents-class/blob/main/lab1/images/3-associate s.png">
-
-Select the available runtime and click on Associate.
-<img src="https://github.ibm.com/skol-assets/watsonx-ai-agents-class/blob/main/lab1/images/4-associate s.png">
-
-Then go back to the tab for creating a new asset and start your Agent Lab asset. This brings us to the main page for cretaing an agent with the Agent Lab.
-Here, on the left side of the screen under **"Build"**, you can set up and configure your agent, and on the right side under **"Agent preview"** you will see how those changes are going to be reflected in the agent.
-
-When deifning the agent on the "Build" side, you can select the LLM and change the model parameters (e.g. temperature, max token, etc.). By clicking on Setup, you can define the name of the agent and provide a short description of what is does.
-
-<img src="https://github.ibm.com/skol-assets/watsonx-ai-agents-class/blob/main/lab1/images/5-setup-updated.png">
-
-Then lower on the Build side, you can "Configure" the agent by selecting the Framework and the Architecture. Currently LangGrpah is the only Framework available and ReAct is the only Architecture available. More frameworks and architectures will be added to the Agent Lab in future releases.
-
-Then under the "Instruction" section, you can provide an instruction for how you want the agent to behave. This is very important and often overlooked step. Just like how a well crafted prompt will impact the behavior of an LLM, the instruction to an agent also affects its outcome.
-
-In this example, we are building a Travel Concierge agent that helps the users plan their vacation. Copy the following instruction and paste it in the instruction for this agent.
-
-"""
-*You are a vacation planning assistant that helps users plan their vacations.* 
-
-*If you were asked for a detailed vacation plan, you must use the budget limit provided by the user and utilize Google Search to retrieve up-to-date information about activities, dining options, and travel logistics to suggest a detailed day-by-day vacation plan.*
-*Use Google Search tool to fetch real-time information for:*
-*- Flight options*
-*- Car rental services*
-*- Local grocery stores (e.g., Times Supermarket)*
-*- Restaurant menus and reviews*
-*- Activity bookings (snorkeling, ziplining, guided tours)*
-
-*If you were asked question about the weather of a travel destination, use Weather tool to get real time weather of a city to facilitate making of travel plans.*
-"""
-
-<p align="center">
- <img src="https://github.ibm.com/skol-assets/watsonx-ai-agents-class/blob/main/lab1/images/6-agent config-v2-updated.png" width="75%">
-</p>
-
-
-Then you can select the tools that you want this agent to have. Google Search is the default tool. you can click on Select Tool to choose from a list of available tools. For the Travel Cocierge agent, we will use two tools, Google Search and Weather.
-
-<img src="https://github.ibm.com/skol-assets/watsonx-ai-agents-class/blob/main/lab1/images/7-select tools-v2.png">
-
-Once you are done with defining your agent, you can save your work as an Agent and come back and edit it again later, or save it as a deployment notebook that would give you a nice notebook starting point for further customization.
-
-<img src="https://github.ibm.com/skol-assets/watsonx-ai-agents-class/blob/main/lab1/images/8-save agent-v2.png">
-
-Now, let's test our agent! First, we will ask it to plan our vacation given a specific budget. In the Preview section on the right, test the following question.
-
-Question: *"Give me a detailed 5-day vacation plan to San Francisco, CA with budget limit of $5000."*
-
-<img src="https://github.ibm.com/skol-assets/watsonx-ai-agents-class/blob/main/lab1/images/detailed travel plan.png">
-
-If we go to the end of the response from our agent, we can click on __"How did I get this answer?"__ to gain an insight into what tool our agent has used and how the output is generated. In this case, we can see that the agent is correctly using Google Search to find the relevant information and plan our vacation.
-
-<p align="center">
- <img src="https://github.ibm.com/skol-assets/watsonx-ai-agents-class/blob/main/lab1/images/travel plan- tool result-updated.png" width="75%">
-</p>
-
-Let's try another example in which the agent should use the Weather tool.
-
-Question: *"How is the weather in SF from March 5 to March 10?"*
-
-<p align="center">
- <img src="https://github.ibm.com/skol-assets/watsonx-ai-agents-class/blob/main/lab1/images/SF weather results.png" width="75%">
-</p>
-
-Nice! The agent is using the weather tool now. So our agent was successful in choosing the right tool for both user requests.
-
-#
-# Deploy the agent using 1-click deployment
-
-Once you are happy with your agent's performance, you can deploy your agent as an AI service using Agent Lab's 1-click deployment. To do so click on the Deploy icon on the top right of your agent lab page. The Deploy page opens (see below). To continue, you first need to "Create" an API key. Click on "Create". 
-
-<img src="https://github.ibm.com/skol-assets/watsonx-ai-agents-class/blob/main/lab1/images/10-deploy-updated.png">
-
-This will take you to another page to create your API key. __Create and Save your API Key. You will need this API Key in Lab 3 and 4 in order to integrate your Travel Concierge agent into WxO.__
-
-<img src="https://github.ibm.com/skol-assets/watsonx-ai-agents-class/blob/main/lab1/images/11-create key.png">
-
-Copy the API key and save it somewhere or click download to save it. You won’t be able to see this API key again, so you can’t retrieve it later.
-
-<p align="center">
- <img src="https://github.ibm.com/skol-assets/watsonx-ai-agents-class/blob/main/lab1/images/save API Key.png" width="60%">
-</p>
-
-After you created and saved your API Key, go back to the page for "Deploy as an AI Service". Now the "Create" link is replaced with "Reload". Click on "Reload" to reload your API Key. 
-
-<img src="https://github.ibm.com/skol-assets/watsonx-ai-agents-class/blob/main/lab1/images/relaod-key-new-dep-space-updated.png">
 
 ---
 
-> **💡 TIP: 🛠️ Troubleshooting API Key Creation**
->
-> If the pop-up window to copy or download your API key doesn’t appear, follow these steps to retrieve and update it:
-> 1. Manually generate a new API key:
-> - Go to IBM Cloud (https://cloud.ibm.com/).
-> - Go to Manage > Access (IAM).
-> - Create a new API key and save it for later use.
-> 2. Update your API key in wx.ai:
-> - Go to wx.ai and open your profile.
-> - Navigate to User API Key.
-> - Click Rotate to update to the latest key.
+## Agent Lab Platform Overview
+
+### What is Agent Lab?
+
+**watsonx.ai Agent Lab** is a low-code platform that democratizes AI agent development, enabling both business users and technical teams to create sophisticated AI agents without extensive coding knowledge. The platform bridges the gap between business requirements and technical implementation.
+
+### Key Value Propositions
+
+#### 🔧 **Low-Code Agent Builder**
+- **Business Impact**: Enables domain experts to directly build AI solutions
+- **Technical Value**: Reduces development time from weeks to hours
+- **Collaboration**: Creates a common platform for business and technical teams
+
+#### 🚀 **One-Click Deployment**
+- **Scalability**: Instant deployment as enterprise-ready AI services
+- **Time-to-Value**: Deploy and test agents in production within minutes
+- **Integration Ready**: Generate REST APIs for seamless system integration
+
+#### 👩‍💻 **Developer Collaboration Bridge**
+- **Notebook Export**: Business-created agents export as customizable Jupyter notebooks
+- **Code Extension**: Developers can enhance agents with custom tools and integrations
+- **Version Control**: Seamless handoff between business design and technical implementation
+
+### Architecture Overview
+
+```mermaid
+graph TB
+    A[User Query] --> B[Agent Lab Interface]
+    B --> C[Foundation Model]
+    C --> D[Tool Selection Engine]
+    D --> E[External Tools]
+    E --> F[Response Generation]
+    F --> G[User Response]
+    
+    subgraph "Available Tools"
+        H[Google Search]
+        I[Weather API]
+        J[Document Search]
+        K[Custom Tools]
+    end
+    
+    E --> H
+    E --> I
+    E --> J
+    E --> K
+```
+
+For the latest platform capabilities and updates, reference the [official documentation](https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/fm-agent-lab.html?context=wx&pos=2).
 
 ---
 
+## Building Your First Agent
 
-Next you need to create a new deployment space. Click on "New Deployment Space" to go to the page for creating a new deployment space. On this page, name the space, set the deployment stage, and select the runtime service from the drop down menu. Then click on "Create" to create your new space.
+### Step 1: Project Setup and Access
 
-<img src="https://github.ibm.com/skol-assets/watsonx-ai-agents-class/blob/main/lab1/images/13-create deployment space.png">
+**Initial Setup**
+1. Navigate to your watsonx.ai project dashboard
+2. Access the **Assets** tab
+3. Select **New Asset**
 
-When the deployment space is ready, go back to the "Deploy as as AI Service" page and "Reload" the deployment space. Then click on Deploy.
+<img src="https://github.com/ibm-agentic-ai-bootcamp/watsonx-agentic-labs/blob/main/AgentLab/images/1-new asset-updated.png" alt="Create New Asset" style="border: 1px solid #ddd; border-radius: 4px;">
 
-<img src="https://github.ibm.com/skol-assets/watsonx-ai-agents-class/blob/main/lab1/images/15-ready to deploy.png">
+4. Choose **"Build an AI agent to automate tasks"** from the asset catalog
 
-The deployment will initialize and after a couple of minutes the status will change to "Deployed".
+<img src="https://github.com/ibm-agentic-ai-bootcamp/watsonx-agentic-labs/blob/main/AgentLab/images/2-asset - agent lab-updated.png" alt="Select Agent Lab Asset" style="border: 1px solid #ddd; border-radius: 4px;">
 
-<img src="https://github.ibm.com/skol-assets/watsonx-ai-agents-class/blob/main/lab1/images/17-deployed.png">
+5. When opening the Agent Lab for the first time, you will need to associate it with an ai runtime service. Click on **"Associate service"**.
+
+<img src="https://github.com/ibm-agentic-ai-bootcamp/watsonx-agentic-labs/blob/main/AgentLab/images/3-associate s.png" alt="Associate Runtime Service" style="border: 1px solid #ddd; border-radius: 4px;">
+
+6. Select the available runtime from the dropdown
+7. Click **"Associate"** to confirm
+
+<img src="https://github.com/ibm-agentic-ai-bootcamp/watsonx-agentic-labs/blob/main/AgentLab/images/4-associate s.png" alt="Select Runtime" style="border: 1px solid #ddd; border-radius: 4px;">
+
+### Step 2: Build Agent Profile
+
+The Agent Lab interface is divided into two main sections:
+
+- **Left Panel (Build)**: Agent configuration and setup
+- **Right Panel (Agent Preview)**: Real-time testing and validation
+
+When choosing the LLM for the agent, you can:
+- Choose your preferred foundation model
+- Adjust model parameters (temperature, max tokens, etc.)
+- Consider your use case requirements (creativity vs. precision)
+
+<img src="https://github.com/ibm-agentic-ai-bootcamp/watsonx-agentic-labs/blob/main/AgentLab/images/5-setup-updated.png" alt="Agent Setup Configuration" style="border: 1px solid #ddd; border-radius: 4px;">
+
+1. Click **"Setup"** to define the name of the agent and the agent's purpose:
+- **Agent Name**: Travel Concierge Assistant
+- **Description**: An intelligent vacation planning assistant that helps users create detailed, budget-conscious travel itineraries
+
+2. Click **"Configure"**:
+You can configure the agent by selecting the Framework and the Architecture. Currently LangGrpah is the only Framework available and ReAct is the only Architecture available. More frameworks and architectures will be added to the Agent Lab in future releases.
+
+Agent instructions are equivalent to prompt engineering for LLMs. Well-crafted instructions directly impact agent performance, tool selection accuracy, and response quality.
+
+<p align="center">
+<img src="https://github.com/ibm-agentic-ai-bootcamp/watsonx-agentic-labs/blob/main/AgentLab/images/6-agent config-v2-updated.png" alt="Agent Configuration Interface" width="85%" style="border: 1px solid #ddd; border-radius: 4px;">
+</p>
+
+3. Copy and paste the following instructions under **"Instructions"**:
+
+```markdown
+You are a professional vacation planning assistant specializing in creating detailed, budget-conscious travel itineraries.
+
+**Primary Responsibilities:**
+- Create comprehensive day-by-day vacation plans within specified budgets
+- Provide real-time weather information for travel destinations
+- Source current pricing and availability for travel services
+
+**Tool Usage Guidelines:**
+
+**Google Search Tool - Use for:**
+- Flight options and pricing research
+- Car rental service availability and rates
+- Local dining establishments and menu reviews
+- Activity bookings (tours, attractions, experiences)
+- Accommodation recommendations and pricing
+- Local grocery stores and convenience services
+
+**Weather Tool - Use for:**
+- Current weather conditions at destinations
+- Multi-day weather forecasts for trip planning
+- Seasonal weather patterns and recommendations
+
+**Response Requirements:**
+- Always respect budget constraints provided by users
+- Provide specific, actionable recommendations with current pricing
+- Include alternative options when primary choices may be unavailable
+- Cite sources for pricing and availability information
+```
+
+4. Click on **"Tools"**. Select both **Google Search** and **Weather** tools to enable comprehensive travel planning capabilities.
+
+<img src="https://github.com/ibm-agentic-ai-bootcamp/watsonx-agentic-labs/blob/main/AgentLab/images/7-select tools-v2.png" alt="Tool Selection Interface" style="border: 1px solid #ddd; border-radius: 4px;">
 
 ---
 
-> **💡 TIP: 🛠️ Troubleshooting Deployment Failures**
->
-> If your deployment fails, the issue may be related to your API key. Try the following steps to resolve it:
-> 1. Generate a new API key:
-> - Go to IBM Cloud (https://cloud.ibm.com/).
-> - Navigate to Manage > Access (IAM).
-> - Create a new API key and copy/download it for later use.
-> 2. Update your API key in wx.ai:
-> - Go to your wx.ai profile.
-> - Navigate to User API Key.
-> - Click Rotate to update to the latest key.
-> 3. Redeploy your agent.
+### Step 3: Testing and Validation
+
+#### Test Case 1: Comprehensive Travel Planning
+
+**Test Query:**
+```
+Give me a detailed 5-day vacation plan to San Francisco, CA with a budget limit of $5000.
+```
+
+**Expected Behavior:**
+- Agent should use Google Search to find current pricing
+- Provide day-by-day itinerary breakdown
+- Include accommodation, dining, transportation, and activities
+- Respect the $5000 budget constraint
+
+<img src="https://github.com/ibm-agentic-ai-bootcamp/watsonx-agentic-labs/blob/main/AgentLab/images/detailed travel plan.png" alt="Detailed Travel Plan Response" style="border: 1px solid #ddd; border-radius: 4px;">
+
+**Analyzing Agent Behavior:**
+Click **"How did I get this answer?"** to examine:
+- Which tools were selected and why
+- Search queries executed
+- Information synthesis process
+
+<p align="center">
+<img src="https://github.com/ibm-agentic-ai-bootcamp/watsonx-agentic-labs/blob/main/AgentLab/images/travel plan- tool result-updated.png" alt="Tool Usage Analysis" width="85%" style="border: 1px solid #ddd; border-radius: 4px;">
+</p>
+
+#### Test Case 2: Weather-Specific Queries
+
+**Test Query:**
+```
+How is the weather in SF from March 5 to March 10?
+```
+
+**Expected Behavior:**
+- Agent should automatically select the Weather tool
+- Provide detailed forecast information
+- Include travel recommendations based on weather conditions
+
+<p align="center">
+<img src="https://github.com/ibm-agentic-ai-bootcamp/watsonx-agentic-labs/blob/main/AgentLab/images/SF weather results.png" alt="Weather Query Results" width="85%" style="border: 1px solid #ddd; border-radius: 4px;">
+</p>
 
 ---
 
-Once deployed, click on the agent name to see the information about this deployment (see below). You can find your deployment ID on the right panel. __Save your Deployment ID as you will need it in Lab 3 and 4 for inetgrating your Travel Concierge agent into WxO.__
+### Step 4: Initiate Deployment Process
 
-<img src="https://github.ibm.com/skol-assets/watsonx-ai-agents-class/blob/main/lab1/images/18-deployment info-updated.png">
+Once satisfied with your agent's performance, deploy it as an enterprise-ready AI service:
 
-In order to implement our Travel Concierge agent as an external agent in WxO, in addition to API Key and Deployment ID, we also need the Service URL and the Space ID. The URL can also be found in the beginning part of the endpoints from the deployment info page, i.e. "https://us-south.ml.cloud.ibm.com".
+1. Click the **"Deploy"** icon in the top-right corner
+2. This opens the deployment configuration interface
 
-Now, you only need the __Space ID__ to have all the required information from Lab 1. For Space ID, from hamburger menu on top left, go to "Deployments". Then click on the “Spaces” tab and click on the deployment space you created.  
+<img src="https://github.com/ibm-agentic-ai-bootcamp/watsonx-agentic-labs/blob/main/AgentLab/images/10-deploy-updated.png" alt="Deploy Interface" style="border: 1px solid #ddd; border-radius: 4px;">
 
-<img src="https://github.ibm.com/skol-assets/watsonx-ai-agents-class/blob/main/lab1/images/space ID-1.png">
 
-In your deployment space, click on the "Manage" tab, and save your Space ID for using it later in Lab 3 and 4.
+3. **Critical Step**: Generate and securely store your API key for future integrations.
 
-<img src="https://github.ibm.com/skol-assets/watsonx-ai-agents-class/blob/main/lab1/images/space ID-2-updated.png">
+<img src="https://github.com/ibm-agentic-ai-bootcamp/watsonx-agentic-labs/blob/main/AgentLab/images/11-create key.png" alt="API Key Creation" style="border: 1px solid #ddd; border-radius: 4px;">
 
-### Yay!!! Now you have officially completed Lab 1! 🚀
+**⚠️ Security Best Practices:**
+- Download and store the API key immediately
+- API keys cannot be retrieved after initial creation
+- Use secure credential management systems in production
 
-The rest of this GitHub repo provides some additional tips on implementing various use cases in Agent Lab.
+<p align="center">
+<img src="https://github.com/ibm-agentic-ai-bootcamp/watsonx-agentic-labs/blob/main/AgentLab/images/save API Key.png" alt="Save API Key" width="70%" style="border: 1px solid #ddd; border-radius: 4px;">
+</p>
 
-# Additional tips for implementing various use cases in Agent Lab
+4. After saving your API key, return to the deployment page and click **"Reload"** to refresh the API key status.
 
-Below are some practical tips that can help you make your desired agent with Agent Lab:
+<img src="https://github.com/ibm-agentic-ai-bootcamp/watsonx-agentic-labs/blob/main/AgentLab/images/relaod-key-new-dep-space-updated.png" alt="Reload API Key" style="border: 1px solid #ddd; border-radius: 4px;">
 
-+ ### It takes trial and error!
-  - Yup, keep experimenting to get what you want.
-+ ### Tailoring instructions is very important for agents, just like prompt engineering for LLMs 
-  - For instance, your instrcution should include:
-    - What task you want the agent to perform;
-    - What tools the agent has access to;
-    - How and when those tools should be used;
-+ ### Tips about custom tools
-  - Adding a custom tool in Agent Lab is temporarily disabled (as of early March 2025) but will come back soon! Workaround in the meantime: save your agent as a deployment notebook, and then add your custom fuction or tool through custom code.
-+ ### Tips about doc search tool
-  - In the latest Agent Lab release (as of early March 2025), the Doc Search tool requires selecting an existing vector index from your project's available indexes. Currently, Agent Lab does not support document vectorization directly. To use Doc Search, first vectorize your document externally and create a vector index. Once the index is ready and added to your project, it will automatically appear in the dropdown menu for selection in the Doc Search tool.
-    - To vectorize your document, create a new asset using the **Ground gen AI with vectorized documents** feature from the **New asset** list. And once your document is vectorized, return to Agent Lab and select the generated vector index from the dropdown list.
- 
+### 🛠️ Troubleshooting: API Key Issues
+
+If you encounter API key creation issues:
+
+1. **Manual API Key Generation:**
+   - Navigate to [IBM Cloud Console](https://cloud.ibm.com/)
+   - Go to **Manage → Access (IAM)**
+   - Create a new API key and download it
+
+2. **Update watsonx.ai Profile:**
+   - Open your watsonx.ai profile
+   - Navigate to **User API Key**
+   - Click **"Rotate"** to update to the latest key
+
+### Step 5: Deployment Space Configuration
+
+1. Create a dedicated deployment space for your agent:
+
+<img src="https://github.com/ibm-agentic-ai-bootcamp/watsonx-agentic-labs/blob/main/AgentLab/images/13-create deployment space.png" alt="Create Deployment Space" style="border: 1px solid #ddd; border-radius: 4px;">
+
+**Configuration Parameters:**
+- **Space Name**: `travel-concierge-prod`
+- **Deployment Stage**: Production
+- **Runtime Service**: Select from dropdown menu
+
+### Step 6: Final Deployment
+
+After creating your deployment space:
+
+1. **Reload** the deployment space in the interface
+2. Click **"Deploy"** to initiate the deployment process
+
+<img src="https://github.com/ibm-agentic-ai-bootcamp/watsonx-agentic-labs/blob/main/AgentLab/images/15-ready to deploy.png" alt="Ready to Deploy" style="border: 1px solid #ddd; border-radius: 4px;">
+
+**Deployment Timeline:**
+- Initial deployment: 2-3 minutes
+- Status will change from "Initializing" to "Deployed"
+
+<img src="https://github.com/ibm-agentic-ai-bootcamp/watsonx-agentic-labs/blob/main/AgentLab/images/17-deployed.png" alt="Deployment Complete" style="border: 1px solid #ddd; border-radius: 4px;">
+
+### 🛠️ Troubleshooting: Deployment Failures
+
+Common deployment issues and solutions:
+
+1. **API Key Related Failures:**
+   - Generate a fresh API key in IBM Cloud
+   - Update your watsonx.ai profile
+   - Retry deployment
+
+2. **Runtime Service Issues:**
+   - Verify runtime service availability
+   - Check service quotas and limits
+   - Contact support if issues persist
+
+### Step 5: Collecting Deployment Credentials
+
+**Essential Information for Integration:**
+
+Click on your deployed agent name to access the deployment details:
+
+<img src="https://github.com/ibm-agentic-ai-bootcamp/watsonx-agentic-labs/blob/main/AgentLab/images/18-deployment info-updated.png" alt="Deployment Information" style="border: 1px solid #ddd; border-radius: 4px;">
+
+## 🎉 Lab Completion
+
+### Congratulations! 
+
+You have successfully completed the Lab! See below for how Agent Lab allows collaborative workflow of business and development teams.
+
+## Developer Collaboration Workflow
+
+### The Business-Developer Bridge
+
+**Agent Lab's Unique Value Proposition**: Seamless collaboration between business domain experts and technical developers.
+
+### Workflow Overview
+
+```mermaid
+graph LR
+    A[Business User] --> B[Agent Lab Design]
+    B --> C[Testing & Validation]
+    C --> D[Export as Notebook]
+    D --> E[Developer Enhancement]
+    E --> F[Custom Tools & Integration]
+    F --> G[Production Deployment]
+    
+    subgraph "Business Domain"
+        A
+        B
+        C
+    end
+    
+    subgraph "Technical Domain"
+        D
+        E
+        F
+        G
+    end
+```
+
+### Save Options: Agent vs. Deployment Notebook
+
+When saving your work in Agent Lab, you have two strategic options:
+
+<img src="https://github.com/ibm-agentic-ai-bootcamp/watsonx-agentic-labs/blob/main/AgentLab/images/8-save agent-v2.png" alt="Save Options" style="border: 1px solid #ddd; border-radius: 4px;">
+
+#### Option 1: Save as Agent
+- **Use Case**: Continue business user iteration
+- **Benefits**: Maintain Agent Lab interface for further modifications
+- **Ideal For**: Ongoing business user refinement and testing
+
+#### Option 2: Save as Deployment Notebook
+- **Use Case**: Hand off to development team
+- **Benefits**: Provides complete, customizable Jupyter notebook
+- **Ideal For**: Developer enhancement and custom integration
+
+### Developer Enhancement Opportunities
+
+**The deployment notebook provides developers with:**
+
+1. **Complete Agent Code**: Full implementation with all configurations
+2. **Customization Points**: Clear areas for adding custom tools and logic
+3. **Integration Templates**: Pre-built API integration patterns
+4. **Testing Framework**: Built-in testing and validation capabilities
+
+**Common Developer Enhancements:**
+- **Custom Tool Integration**: Connect to enterprise APIs and databases
+- **Advanced Error Handling**: Implement sophisticated fallback mechanisms
+- **Performance Optimization**: Add caching and response optimization
+- **Security Enhancements**: Implement enterprise-grade security controls
+- **Monitoring and Logging**: Add comprehensive observability features
+
+### Collaboration Best Practices
+
+1. **Clear Handoff Documentation**: Business users should document use cases and expected behaviors
+2. **Version Control**: Use Git for managing notebook versions and modifications
+3. **Testing Continuity**: Maintain the same test cases across business and technical implementations
+4. **Feedback Loops**: Establish regular check-ins between business and technical teams
 
 
