@@ -28,7 +28,7 @@ By the end of this lab, you will:
    - [Step 5: Deployment Space Configuration](#step-5-deployment-space-configuration)
    - [Step 6: Final Deployment](#step-6-final-deployment)
    - [Step 5: Collecting Deployment Credentials](#step-5-collecting-deployment-credentials)
-3. [Lab Completion 🎉](#-lab-completion)
+3. [Lab Completion](#-lab-completion)
 4. [[Optional] Developer Collaboration Workflow](#developer-collaboration-workflow)
    - [The Business-Developer Bridge](#the-business-developer-bridge)
    - [Workflow Overview](#workflow-overview)
