@@ -74,20 +74,20 @@ By the end of this lab, you will:
 2. Access the **Assets** tab
 3. Select **New Asset**
 
-<img src="https://github.com/ibm-agentic-ai-bootcamp/watsonx-agentic-labs/blob/main/AgentLab/images/1-new asset-updated.png" alt="Create New Asset" style="border: 1px solid #ddd; border-radius: 4px;">
+![Create New Asset](https://github.com/ibm-agentic-ai-bootcamp/watsonx-agentic-labs/blob/main/AgentLab/images/1-new%20asset-updated.png)
 
 4. Choose **"Build an AI agent to automate tasks"** from the asset catalog
 
-<img src="https://github.com/ibm-agentic-ai-bootcamp/watsonx-agentic-labs/blob/main/AgentLab/images/2-asset - agent lab-updated.png" alt="Select Agent Lab Asset" style="border: 1px solid #ddd; border-radius: 4px;">
+![Select Agent Lab Asset](https://github.com/ibm-agentic-ai-bootcamp/watsonx-agentic-labs/blob/main/AgentLab/images/2-asset%20-%20agent%20lab-updated.png)
 
 5. When opening the Agent Lab for the first time, you will need to associate it with an ai runtime service. Click on **"Associate service"**.
 
-<img src="https://github.com/ibm-agentic-ai-bootcamp/watsonx-agentic-labs/blob/main/AgentLab/images/3-associate s.png" alt="Associate Runtime Service" style="border: 1px solid #ddd; border-radius: 4px;">
+![Associate Runtime Service](https://github.com/ibm-agentic-ai-bootcamp/watsonx-agentic-labs/blob/main/AgentLab/images/3-associate%20s.png)
 
 6. Select the available runtime from the dropdown
 7. Click **"Associate"** to confirm
 
-<img src="https://github.com/ibm-agentic-ai-bootcamp/watsonx-agentic-labs/blob/main/AgentLab/images/4-associate s.png" alt="Select Runtime" style="border: 1px solid #ddd; border-radius: 4px;">
+![Select Runtime](https://github.com/ibm-agentic-ai-bootcamp/watsonx-agentic-labs/blob/main/AgentLab/images/4-associate%20s.png)
 
 ### Step 2: Build Agent Profile
 
@@ -101,7 +101,7 @@ When choosing the LLM for the agent, you can:
 - Adjust model parameters (temperature, max tokens, etc.)
 - Consider your use case requirements (creativity vs. precision)
 
-<img src="https://github.com/ibm-agentic-ai-bootcamp/watsonx-agentic-labs/blob/main/AgentLab/images/5-setup-updated.png" alt="Agent Setup Configuration" style="border: 1px solid #ddd; border-radius: 4px;">
+![Agent Setup Configuration](https://github.com/ibm-agentic-ai-bootcamp/watsonx-agentic-labs/blob/main/AgentLab/images/5-setup-updated.png)
 
 1. Click **"Setup"** to define the name of the agent and the agent's purpose:
 - **Agent Name**: Travel Concierge Assistant
@@ -112,9 +112,7 @@ You can configure the agent by selecting the Framework and the Architecture. Cur
 
 Agent instructions are equivalent to prompt engineering for LLMs. Well-crafted instructions directly impact agent performance, tool selection accuracy, and response quality.
 
-<p align="center">
-<img src="https://github.com/ibm-agentic-ai-bootcamp/watsonx-agentic-labs/blob/main/AgentLab/images/6-agent config-v2-updated.png" alt="Agent Configuration Interface" width="85%" style="border: 1px solid #ddd; border-radius: 4px;">
-</p>
+![Agent Configuration Interface](https://github.com/ibm-agentic-ai-bootcamp/watsonx-agentic-labs/blob/main/AgentLab/images/6-agent%20config-v2-updated.png)
 
 3. Copy and paste the following instructions under **"Instructions"**:
 
@@ -150,7 +148,7 @@ You are a professional vacation planning assistant specializing in creating deta
 
 4. Click on **"Tools"**. Select both **Google Search** and **Weather** tools to enable comprehensive travel planning capabilities.
 
-<img src="https://github.com/ibm-agentic-ai-bootcamp/watsonx-agentic-labs/blob/main/AgentLab/images/7-select tools-v2.png" alt="Tool Selection Interface" style="border: 1px solid #ddd; border-radius: 4px;">
+![Tool Selection Interface](https://github.com/ibm-agentic-ai-bootcamp/watsonx-agentic-labs/blob/main/AgentLab/images/7-select%20tools-v2.png)
 
 ---
 
@@ -169,7 +167,7 @@ Give me a detailed 5-day vacation plan to San Francisco, CA with a budget limit 
 - Include accommodation, dining, transportation, and activities
 - Respect the $5000 budget constraint
 
-<img src="https://github.com/ibm-agentic-ai-bootcamp/watsonx-agentic-labs/blob/main/AgentLab/images/detailed travel plan.png" alt="Detailed Travel Plan Response" style="border: 1px solid #ddd; border-radius: 4px;">
+![Detailed Travel Plan Response](https://github.com/ibm-agentic-ai-bootcamp/watsonx-agentic-labs/blob/main/AgentLab/images/detailed%20travel%20plan.png)
 
 **Analyzing Agent Behavior:**
 Click **"How did I get this answer?"** to examine:
@@ -177,9 +175,7 @@ Click **"How did I get this answer?"** to examine:
 - Search queries executed
 - Information synthesis process
 
-<p align="center">
-<img src="https://github.com/ibm-agentic-ai-bootcamp/watsonx-agentic-labs/blob/main/AgentLab/images/travel plan- tool result-updated.png" alt="Tool Usage Analysis" width="85%" style="border: 1px solid #ddd; border-radius: 4px;">
-</p>
+![Tool Usage Analysis](https://github.com/ibm-agentic-ai-bootcamp/watsonx-agentic-labs/blob/main/AgentLab/images/travel%20plan-%20tool%20result-updated.png)
 
 #### Test Case 2: Weather-Specific Queries
 
@@ -193,9 +189,7 @@ How is the weather in SF from March 5 to March 10?
 - Provide detailed forecast information
 - Include travel recommendations based on weather conditions
 
-<p align="center">
-<img src="https://github.com/ibm-agentic-ai-bootcamp/watsonx-agentic-labs/blob/main/AgentLab/images/SF weather results.png" alt="Weather Query Results" width="85%" style="border: 1px solid #ddd; border-radius: 4px;">
-</p>
+![Weather Query Results](https://github.com/ibm-agentic-ai-bootcamp/watsonx-agentic-labs/blob/main/AgentLab/images/SF%20weather%20results.png)
 
 ---
 
@@ -206,25 +200,23 @@ Once satisfied with your agent's performance, deploy it as an enterprise-ready A
 1. Click the **"Deploy"** icon in the top-right corner
 2. This opens the deployment configuration interface
 
-<img src="https://github.com/ibm-agentic-ai-bootcamp/watsonx-agentic-labs/blob/main/AgentLab/images/10-deploy-updated.png" alt="Deploy Interface" style="border: 1px solid #ddd; border-radius: 4px;">
+![Deploy Interface](https://github.com/ibm-agentic-ai-bootcamp/watsonx-agentic-labs/blob/main/AgentLab/images/10-deploy-updated.png)
 
 
 3. **Critical Step**: Generate and securely store your API key for future integrations.
 
-<img src="https://github.com/ibm-agentic-ai-bootcamp/watsonx-agentic-labs/blob/main/AgentLab/images/11-create key.png" alt="API Key Creation" style="border: 1px solid #ddd; border-radius: 4px;">
+![API Key Creation](https://github.com/ibm-agentic-ai-bootcamp/watsonx-agentic-labs/blob/main/AgentLab/images/11-create%20key.png)
 
 **⚠️ Security Best Practices:**
 - Download and store the API key immediately
 - API keys cannot be retrieved after initial creation
 - Use secure credential management systems in production
 
-<p align="center">
-<img src="https://github.com/ibm-agentic-ai-bootcamp/watsonx-agentic-labs/blob/main/AgentLab/images/save API Key.png" alt="Save API Key" width="70%" style="border: 1px solid #ddd; border-radius: 4px;">
-</p>
+![Save API Key](https://github.com/ibm-agentic-ai-bootcamp/watsonx-agentic-labs/blob/main/AgentLab/images/save%20API%20Key.png)
 
 4. After saving your API key, return to the deployment page and click **"Reload"** to refresh the API key status.
 
-<img src="https://github.com/ibm-agentic-ai-bootcamp/watsonx-agentic-labs/blob/main/AgentLab/images/relaod-key-new-dep-space-updated.png" alt="Reload API Key" style="border: 1px solid #ddd; border-radius: 4px;">
+![Reload API Key](https://github.com/ibm-agentic-ai-bootcamp/watsonx-agentic-labs/blob/main/AgentLab/images/relaod-key-new-dep-space-updated.png)
 
 ### 🛠️ Troubleshooting: API Key Issues
 
@@ -244,7 +236,7 @@ If you encounter API key creation issues:
 
 1. Create a dedicated deployment space for your agent:
 
-<img src="https://github.com/ibm-agentic-ai-bootcamp/watsonx-agentic-labs/blob/main/AgentLab/images/13-create deployment space.png" alt="Create Deployment Space" style="border: 1px solid #ddd; border-radius: 4px;">
+![Create Deployment Space](https://github.com/ibm-agentic-ai-bootcamp/watsonx-agentic-labs/blob/main/AgentLab/images/13-create%20deployment%20space.png)
 
 **Configuration Parameters:**
 - **Space Name**: `travel-concierge-prod`
@@ -258,13 +250,13 @@ After creating your deployment space:
 1. **Reload** the deployment space in the interface
 2. Click **"Deploy"** to initiate the deployment process
 
-<img src="https://github.com/ibm-agentic-ai-bootcamp/watsonx-agentic-labs/blob/main/AgentLab/images/15-ready to deploy.png" alt="Ready to Deploy" style="border: 1px solid #ddd; border-radius: 4px;">
+![Ready to Deploy](https://github.com/ibm-agentic-ai-bootcamp/watsonx-agentic-labs/blob/main/AgentLab/images/15-ready%20to%20deploy.png)
 
 **Deployment Timeline:**
 - Initial deployment: 2-3 minutes
 - Status will change from "Initializing" to "Deployed"
 
-<img src="https://github.com/ibm-agentic-ai-bootcamp/watsonx-agentic-labs/blob/main/AgentLab/images/17-deployed.png" alt="Deployment Complete" style="border: 1px solid #ddd; border-radius: 4px;">
+![Deployment Complete](https://github.com/ibm-agentic-ai-bootcamp/watsonx-agentic-labs/blob/main/AgentLab/images/17-deployed.png)
 
 ### 🛠️ Troubleshooting: Deployment Failures
 
@@ -286,7 +278,7 @@ Common deployment issues and solutions:
 
 Click on your deployed agent name to access the deployment details:
 
-<img src="https://github.com/ibm-agentic-ai-bootcamp/watsonx-agentic-labs/blob/main/AgentLab/images/18-deployment info-updated.png" alt="Deployment Information" style="border: 1px solid #ddd; border-radius: 4px;">
+![Deployment Information](https://github.com/ibm-agentic-ai-bootcamp/watsonx-agentic-labs/blob/main/AgentLab/images/18-deployment%20info-updated.png)
 
 ## Lab Completion
 
@@ -329,7 +321,7 @@ graph LR
 
 When saving your work in Agent Lab, you have two strategic options:
 
-<img src="https://github.com/ibm-agentic-ai-bootcamp/watsonx-agentic-labs/blob/main/AgentLab/images/8-save agent-v2.png" alt="Save Options" style="border: 1px solid #ddd; border-radius: 4px;">
+![Save Options](https://github.com/ibm-agentic-ai-bootcamp/watsonx-agentic-labs/blob/main/AgentLab/images/8-save%20agent-v2.png)
 
 #### Option 1: Save as Agent
 - **Use Case**: Continue business user iteration
@@ -363,5 +355,3 @@ When saving your work in Agent Lab, you have two strategic options:
 2. **Version Control**: Use Git for managing notebook versions and modifications
 3. **Testing Continuity**: Maintain the same test cases across business and technical implementations
 4. **Feedback Loops**: Establish regular check-ins between business and technical teams
-
-
