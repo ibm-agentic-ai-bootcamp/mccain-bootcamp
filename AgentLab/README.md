@@ -62,31 +62,6 @@ By the end of this lab, you will:
 - **Code Extension**: Developers can enhance agents with custom tools and integrations
 - **Version Control**: Seamless handoff between business design and technical implementation
 
-### Architecture Overview
-
-```mermaid
-graph TB
-    A[User Query] --> B[Agent Lab Interface]
-    B --> C[Foundation Model]
-    C --> D[Tool Selection Engine]
-    D --> E[External Tools]
-    E --> F[Response Generation]
-    F --> G[User Response]
-    
-    subgraph "Available Tools"
-        H[Google Search]
-        I[Weather API]
-        J[Document Search]
-        K[Custom Tools]
-    end
-    
-    E --> H
-    E --> I
-    E --> J
-    E --> K
-```
-
-For the latest platform capabilities and updates, reference the [official documentation](https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/fm-agent-lab.html?context=wx&pos=2).
 
 ---
 
