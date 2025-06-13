@@ -13,7 +13,7 @@ By the end of this lab, you will:
 
 ---
 
-## Table of Contents 📋
+## Table of Contents
 
 
 1. [Agent Lab Platform Overview](#agent-lab-platform-overview)
