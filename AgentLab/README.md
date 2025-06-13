@@ -1,15 +1,15 @@
 # Lab 1: Building AI Agents with watsonx.ai Agent Lab
 
-## Overview 🎯
+## Overview
 
 In this lab, you'll learn how to build, test, and deploy a vacation planning agent while exploring the collaboration opportunities between business users and developers.
 
 ### Learning Objectives
 By the end of this lab, you will:
-- ✅ Build a functional vacation planning agent with multiple tools
-- ✅ Deploy your agent using 1-click deployment
-- ✅ Explore the developer collaboration workflow through deployment notebooks
-- ✅ Collect essential deployment credentials for downstream integrations
+- Build a functional vacation planning agent with multiple tools
+- Deploy your agent using 1-click deployment
+- Explore the developer collaboration workflow through deployment notebooks
+- Collect essential deployment credentials for downstream integrations
 
 ---
 
@@ -47,17 +47,17 @@ By the end of this lab, you will:
 
 ### Key Value Propositions
 
-#### 🔧 **Low-Code Agent Builder**
+#### **Low-Code Agent Builder**
 - **Business Impact**: Enables domain experts to directly build AI solutions
 - **Technical Value**: Reduces development time from weeks to hours
 - **Collaboration**: Creates a common platform for business and technical teams
 
-#### 🚀 **One-Click Deployment**
+#### **One-Click Deployment**
 - **Scalability**: Instant deployment as enterprise-ready AI services
 - **Time-to-Value**: Deploy and test agents in production within minutes
 - **Integration Ready**: Generate REST APIs for seamless system integration
 
-#### 👩‍💻 **Developer Collaboration Bridge**
+#### **Developer Collaboration Bridge**
 - **Notebook Export**: Business-created agents export as customizable Jupyter notebooks
 - **Code Extension**: Developers can enhance agents with custom tools and integrations
 - **Version Control**: Seamless handoff between business design and technical implementation
@@ -313,7 +313,7 @@ Click on your deployed agent name to access the deployment details:
 
 <img src="https://github.com/ibm-agentic-ai-bootcamp/watsonx-agentic-labs/blob/main/AgentLab/images/18-deployment info-updated.png" alt="Deployment Information" style="border: 1px solid #ddd; border-radius: 4px;">
 
-## 🎉 Lab Completion
+## Lab Completion
 
 ### Congratulations! 
 
